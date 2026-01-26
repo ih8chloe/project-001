@@ -1,0 +1,16 @@
+.wrap-number-wrap {
+    display: flex;
+    gap: 10px;
+}
+
+.number-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#description, #comments {
+    width: 440px;
+    height: 200px;
+}
