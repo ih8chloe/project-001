@@ -1,0 +1,91 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple addition calculator</title>
+    <link rel="stylesheet" href="testjs.css">
+    <script src="sum.js"></script>
+</head>
+<body>
+    <div class="add-wrap">
+        <h1>Addition calculator</h1>
+        <div class="x-wrap">
+            <label for="X">X:</label>
+            <input type="text" name="X" id="X"><br>
+        </div>
+        <div class="y-wrap">
+            <label for="Y">Y:</label>
+            <input type="text" name="Y" id="Y"><br>
+        </div>
+        <button onclick="add()">Calculate</button>
+        <button onclick="clearInput('X', 'Y', 'sum')">Clear</button>
+        <h2 id="sum">?</h2>
+    </div>
+    <div class="sub-wrap">
+        <h1>Subtraction calculator</h1>
+        <div class="x-wrap">
+            <label for="X">X:</label>
+            <input type="text" name="X" id="firstInt"><br>
+        </div>
+        <div class="y-wrap">
+            <label for="Y">Y:</label>
+            <input type="text" name="Y" id="secondInt"><br>
+        </div>
+        <button onclick="subtract()">Calculate</button>
+        <button onclick="clearInput('firstInt', 'secondInt', 'subtract')">Clear</button>
+        <h2 id="subtract">?</h2>
+    </div>
+    <div class="div-wrap">
+        <h1>Division calculator</h1>
+        <div class="x-wrap">
+            <label for="X">X:</label>
+            <input type="text" name="X" id="firstInt"><br>
+        </div>
+        <div class="y-wrap">
+            <label for="Y">Y:</label>
+            <input type="text" name="Y" id="secondInt"><br>
+        </div>
+        <button onclick="subtract()">Calculate</button>
+        <button onclick="clearInput('firstInt', 'secondInt', 'subtract')">Clear</button>
+        <h2 id="subtract">?</h2>
+    </div>
+    <div class="multiply-wrap">
+        <h1>Multiplication calculator</h1>
+        <div class="x-wrap">
+            <label for="X">X:</label>
+            <input type="text" name="X" id="firstInt"><br>
+        </div>
+        <div class="y-wrap">
+            <label for="Y">Y:</label>
+            <input type="text" name="Y" id="secondInt"><br>
+        </div>
+        <button onclick="subtract()">Calculate</button>
+        <button onclick="clearInput('firstInt', 'secondInt', 'subtract')">Clear</button>
+        <h2 id="subtract">?</h2>
+    </div>
+    <div class="total-wrap">
+        <h1>All of the above calculator</h1>
+        <div class="x-wrap">
+            <label for="X">X:</label>
+            <input type="text" name="X" id="inputOne"><br>
+        </div>
+        <div class="operator-select">
+            <button onclick="setOperator('+')">+</button>
+            <button onclick="setOperator('-')">-</button>
+            <button onclick="setOperator('x')">x</button>
+            <button onclick="setOperator('/')">/</button>
+            <button onclick="setOperator('%')">%</button>
+        </div>
+        <div class="y-wrap">
+            <label for="Y">Y:</label>
+            <input type="text" name="Y" id="inputTwo"><br>
+        </div>
+        <div class="final-input">
+                
+        </div>
+        <button onclick="calculateTotal()">Calculate</button>
+        <button onclick="clearInput('inputOne', 'inputTwo', 'overallTotal', '.final-input')">Clear</button>
+        <h2 id="overallTotal">?</h2>
+    </div>
+</body>
+</html>
