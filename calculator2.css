@@ -1,0 +1,30 @@
+.total-wrap-two {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.operator-select-two {
+    display: flex;
+    flex-direction: column;
+}
+
+.extra-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.x-y-wrap {
+    margin-top: 5px;
+}
+
+h2#overallTotal {
+    margin: 5px;
+}
+
+.final-input {
+    display: flex;
+    align-items: center;
+    height: 25px;
+}

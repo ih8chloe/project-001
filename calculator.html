@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+    <script src="calc.js"></script>
+</head>
+<body>
+    <!-- improvements needed for error handling e.g. 
+     - if a customer presses calculate without filling in one of the x and y values
+     - if they enter a string -->
+    <h1>Prototype 1 Calculator</h1>
+    <p>Enter values for X and Y, choose an operator, and click calculate to see the result.</p>
+    <div class="total-wrap">
+        <div class="extra-wrap">
+            <div class="x-y-wrap">
+                <div class="x-wrap">
+                    <label for="X">X:</label>
+                    <input type="text" name="X" id="inputOne"><br>
+                </div>
+                <div class="y-wrap">
+                    <label for="Y">Y:</label>
+                    <input type="text" name="Y" id="inputTwo"><br>
+                </div>
+            </div>
+            <div class="final-input">
+            </div>
+            <div class="btn-wrap">
+                <button onclick="calculateTotal()">Calculate</button>
+                <button onclick="clearInput('inputOne', 'inputTwo', 'overallTotal', '.final-input')">Clear</button>
+            </div>
+            <h2 id="overallTotal">?</h2>
+        </div>
+        <div class="operator-select">
+            <button onclick="setOperator('+')">+</button>
+            <button onclick="setOperator('-')">-</button>
+            <button onclick="setOperator('x')">x</button>
+            <button onclick="setOperator('/')">/</button>
+            <button onclick="setOperator('%')">%</button>
+        </div>
+    </div>
+</body>
+</html>

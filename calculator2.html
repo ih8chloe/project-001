@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="calculator2.css">
+    <script src="calc2.js"></script>
+</head>
+<body>
+    <h1>Prototype 2 Calculator</h1>
+    <p>This calculator accepts a single-line expression containing two values and a selected operator, then evaluates and displays the result.</p>
+    <div class="total-wrap-two">
+        <div class="extra-wrap">
+            <div class="input-wrap">
+                <label for="X">Enter expression (e.g., 12 + 5):</label>
+                <input type="text" name="X" class="inputOne" id="inputOne"><br>
+            </div>
+            <div class="final-input">
+            </div>
+            <div class="btn-wrap">
+                <button onclick="calculateTotal()">Calculate</button>
+                <button onclick="clearInput('inputOne', 'inputTwo', 'overallTotal', '.final-input')">Clear</button>
+            </div>
+            <h2 id="overallTotal">?</h2>
+        </div>
+        <div class="operator-select-two">
+            <button onclick="setOperator('+')">+</button>
+            <button onclick="setOperator('-')">-</button>
+            <button onclick="setOperator('x')">x</button>
+            <button onclick="setOperator('/')">/</button>
+            <button onclick="setOperator('%')">%</button>
+        </div>
+    </div>
+</body>
+</html>

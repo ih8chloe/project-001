@@ -1,7 +1,6 @@
 function add() {
-    let a = parseInt(document.getElementById("inputOne").value);
-    let b = parseInt(document.getElementById("inputTwo").value);
-    sum = a + b;
+    parseInput(input)
+    sum = input.a + input.b;
     document.getElementById("overallTotal").innerHTML = sum;
 }
 
@@ -35,7 +34,6 @@ function percentage() {
 
 function clearInput(x,y,z,a) {
     document.getElementById(x).value = "";
-    document.getElementById(y).value = "";
     document.querySelector(a).innerHTML = "";
     document.getElementById(z).innerHTML = "?"
 }
@@ -46,18 +44,33 @@ let operator = "";
 
 function setOperator(opera) {
     operator = opera;
+    const inp = document.getElementById("inputOne");
+    inp.value += operator;
+    inp.focus();
     updateFinalInput();
 }
 
+function parseInput(input) {
+    input = document.getElementById(input).value;
+    const newInput = input.replace(/\s/g, "");
+    const opIndex = newInput.indexOf(operator);
+    const a = Number(newInput.slice(0, opIndex));
+    const b = Number(newInput.slice(opIndex + 1));
+    return {
+        a: a,
+        operator: opIndex,
+        b: b
+    }
+}
+
+
 function updateFinalInput() {
     const x = document.getElementById("inputOne").value;
-    const y = document.getElementById("inputTwo").value;
-
     if (operator === '%') {
-        document.querySelector('.final-input').textContent = `${x}${operator} of ${y}`
+        document.querySelector('.final-input').textContent = `${x} of`
     }
     else {
-        document.querySelector('.final-input').textContent = `${x} ${operator} ${y}`
+        document.querySelector('.final-input').textContent = `${x}`
     }
 }
 
